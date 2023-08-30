@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Handjet:wght@400;500;600&family=Press+Start+2P&display=swap');
+*
+{
+    margin:0%;
+    padding:0%;
+    box-sizing:border-box;
+    
+}
+
+.game-bord
+    {
+        background: linear-gradient(#8bddfd, #48a0c3) !important;
+        width: 100%;
+        height: 100vh;
+        border-bottom: 15px solid rgb(80, 222, 80);
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    .montanha {
+        position: absolute;
+        width: 500px;
+        bottom: -8%;
+        animation: montanha-animation 20s infinite linear;
+    }
+    @keyframes montanha-animation {
+        from {
+            right: -550px;
+        }
+        to {
+            right: 100%;
+        }
+    }
+.pipe
+    {
+        position: absolute;
+        bottom: 0%;
+        width: 80px;
+        
+        animation: pipe-animation 1.5s infinite linear;
+       
+    }    
+
+.mario
+    {
+        width: 150px;
+        position: absolute;
+        bottom: 0;
+       
+    }  
+    .jump
+    {
+        animation:jump-animation 500ms ease-out   ;        
+    }
+    .clouds
+    {
+        position: absolute;
+        width: 650px;
+        animation: cloud-animation 15s infinite linear;
+    }
+    .score
+    {
+        position: absolute;
+       font-size: xx-large;
+       font-family: 'Handjet';
+       font-weight: bolder;
+       padding: 2px;
+       margin-left: 7px;
+       color: rgb(235, 235, 16);
+       border: 2px solid rgb(235, 235, 16);
+       background-color: rgb(220, 107, 51);
+    }
+    .arvore1
+    {
+        position: absolute;
+        width: 200px;
+       bottom: -3%;
+        
+        animation: arvore1-animation 25s infinite linear;
+    }
+   
+
+    @keyframes arvore1-animation{
+        from{
+            right:-800px;;
+        }
+        to
+        {
+            right: 100%;
+        }
+        
+    }
+ 
+    @keyframes cloud-animation{
+        from{
+            right:-550px;;
+        }
+        to
+        {
+            right: 100%;
+        }
+    }
+@keyframes jump-animation
+    {
+        0%
+        {
+            bottom:0;
+        }
+
+        40%
+        {
+            bottom:180px
+        }
+        50%
+        {
+            bottom: 180px;
+
+        }
+        60%
+        {
+            bottom: 180px;
+        }
+        100%
+        {
+            bottom: 0px;
+        }
+    } 
+    @keyframes pipe-animation
+    {
+
+        from
+             {
+                right: -82px;
+             }
+        to 
+              {
+                right: 100%;
+              }
+    }             
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 0, 0, 0.5); /* Vermelho transparente */
+        z-index: 1;
+        display: none;
+    }
+    .perdeuplayboy
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        display: none;
+        font-family: 'Handjet';
+        font-weight: bolder;
+        z-index: 10;
+    
+    }
+.nome
+{
+    position: absolute;
+    font-size: xx-large;
+    font-family: 'Handjet';
+    font-weight: bolder;
+    padding: 2px;
+    margin-right: 7px;
+    left: 90%;
+    color: rgb(235, 235, 16);
+    border: 2px solid rgb(235, 235, 16);
+    background-color: rgb(220, 107, 51);
+}   
+.editar_conta
+{
+    position: absolute;
+    font-size: xx-large;
+    font-family: 'Handjet';
+    font-weight: bolder;
+    padding: 2px;
+    margin-right: 7px;
+    left: 90%;
+    top: 90px;
+    color: rgb(235, 235, 16);
+    border: 2px solid rgb(235, 235, 16);
+    background-color: rgb(220, 107, 51);
+    z-index: 30;
+    cursor: pointer;
+} 
+  
+    
+    

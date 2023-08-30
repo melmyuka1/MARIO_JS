@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Mario</title>
+    <link rel="stylesheet" href="mario.css">
+    <script src="mario.js" defer></script>
+    <script src="json.js"></script>
+    <script src="servidor.js" defer></script>
+</head>
+<body>
+
+ 
+    
+    <audio id="musicaprincipal" loop>
+        <source src="img/Super-Mario.mp3" type="audio/mpeg">
+        Seu navegador não tem suporte para áudio
+    </audio>
+    <audio id="mortemario">
+        <source src="img/mariomorre.mp3" type="audio/mpeg">
+    </audio>
+    <div class="game-bord">
+        <img src="img/montanha.png" class="montanha">
+        <img src="img/arvore.png" class="arvore1">
+        <img src="img/pipe.png" class="pipe">
+        <img src="img/mario.gif" class="mario">
+        <img src="img/clouds.png" class="clouds">
+        <div class="perdeuplayboy" id="perdeuplayboy">
+            PERDEU PLAYBOY... pressione Enter para continuar :P
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="player-info">
+            <p id="playerName" class="nome" onclick="redirectToAccountPage()"></p>
+        </div>
+        <p class="score">Score: 0</p>
+    </div>
+    <div class="editar usuario">
+        <button class="editar_conta" onclick="redirectToEditPage1()">Editar sua conta</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const nome = params.get("nome");
+
+            const playerNameElement = document.getElementById("playerName");
+            playerNameElement.textContent = nome;
+
+        });
+       
+    </script>
+    
+    
+</body>
+</html>

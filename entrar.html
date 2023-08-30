@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome do Jogador</title>
+    <link rel="stylesheet" href="entrar.css">
+</head>
+<body>
+    <form id="formname">
+        <div class="digite" id="nome">Digite o seu nome:</div>
+        <input type="text" class="nome" placeholder="Digite seu Nome" id="inputNome">
+        <button class="custom-button" id="btnProsseguir" disabled>Prosseguir</button>
+    </form>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const btnProsseguir = document.getElementById("btnProsseguir");
+            const inputNome = document.getElementById("inputNome");
+
+            inputNome.addEventListener("input", function() {
+                if (inputNome.value.trim() !== "") {
+                    btnProsseguir.disabled = false;
+                } else {
+                    btnProsseguir.disabled = true;
+                }
+            });
+
+            document.getElementById("formname").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const nome = inputNome.value.trim();
+                if (nome !== "") {
+                    window.location.href = `mario.html?nome=${encodeURIComponent(nome)}`;
+                } else {
+                    alert("Por favor, insira um nome válido.");
+                }
+            });
+        });
+        
+
+        
+       
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,5 @@
+//Para executar a pagina basta abrir
+// o terminal (Ctrl + ~) e digitar : node servidor.js
+
+//para isso voce precisa ter o node instalado na sua maquina, para fechar o servidor 
+//basta apertar 'Ctrl + C' no terminal onde vc abriu o servidor 

@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(234, 189, 130);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.txt {
+    font-size: 4vw;
+    font-family: 'Handjet';
+    font-weight: bolder;
+    padding: 10px;
+    color: rgb(235, 235, 16);
+    border: 2px solid rgb(235, 235, 16);
+    background-color: rgb(220, 107, 51);
+    text-align: center;
+    width: 60vw;
+}
+
+@media (max-width: 768px) {
+    .txt {
+        font-size: 6vw;
+        padding: 5px;
+        width: 80vw;
+    }
+}
+
+.deleteButton {
+    font-size: 2vw;
+    font-family: 'Handjet';
+    font-weight: bolder;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(235, 151, 16);
+    background-color: rgb(243, 32, 0);
+    align-items: center;
+    height: 60px;
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    background-color: #ff0000;
+}
+
+.custom-button:active {
+    background-color: #ff5d5d;
+}
+
+.nome, .score {
+    font-size: 3vw;
+    font-family: 'Handjet';
+    font-weight: bolder;
+    padding: 10px;
+    color: rgb(235, 235, 16);
+    border: 2px solid rgb(235, 235, 16);
+    background-color: rgb(220, 107, 51);
+    width: 60vw;
+}
+
+@media (max-width: 768px) {
+    .nome, .score {
+        font-size: 4vw;
+        padding: 5px;
+        width: 80vw;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crud.css">
+    <title>Editar Conta</title>
+</head>
+<body>
+    <div class="container">
+        <div class="textao">
+            <h1 class="txt" id="welcomeText">Edite sua Conta</h1>
+        </div>
+        <p id="playerName" class="nome"></p>
+        <p id="highScore" class="score+alto"></p>
+        <p id="playerScore" class="score"></p>
+        <button id="deleteButton" class="deleteButton">Clique aqui para deletar sua Conta</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const nome = params.get("nome");
+            const score = params.get("score"); 
+            const playerNameElement = document.getElementById("playerName");
+            playerNameElement.textContent = `Nome: ${nome}`;
+            
+            const playerScoreElement = document.getElementById("playerScore");
+            playerScoreElement.textContent = `Score: ${score}`;
+   
+            localStorage.setItem("score", score);
+
+            const deleteButton = document.getElementById("deleteButton");
+
+            deleteButton.addEventListener("click", function() {
+                console.log("Botão de deletar conta clicado.");
+                const confirmation = confirm('Tem certeza de que deseja deletar sua conta?');
+                
+                if (confirmation) {
+                    console.log('Dados do usuário deletados com sucesso.');
+                    window.location.href = 'entrar.html';
+                } else {
+                    console.log('Ação de deletar cancelada.');
+                }
+            });
+
+            const nomeElement = document.getElementById("playerName");
+
+            nomeElement.addEventListener('click', function () {
+                const novoNome = prompt('Digite seu novo nome:');
+                if (novoNome) {
+                    nomeElement.textContent = `Nome: ${novoNome}`;
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
